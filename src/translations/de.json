@@ -1,0 +1,198 @@
+{
+  "quiz": {
+    "questions": [
+      {
+        "id": 1,
+        "title": "Was ist Ihre bevorzugte Sprache?",
+        "description": "Sprache auswählen",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "English",
+            "localeCode": "en"
+          },
+          {
+            "id": 2,
+            "label": "French",
+            "localeCode": "fr"
+          },
+          {
+            "id": 3,
+            "label": "German",
+            "localeCode": "de"
+          },
+          {
+            "id": 4,
+            "label": "Spanish",
+            "localeCode": "es"
+          }
+        ],
+        "showBackButton": false,
+        "viewType":"col",
+        "font": "nunito"
+      },
+      {
+        "id": 2,
+        "title": "Mit welchem Geschlecht identifizieren Sie sich?",
+        "description": "Bitte geben Sie an, wie Sie sich selbst identifizieren.",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label":"Weiblich",
+            "dependencyValue": "female",
+            "icon": "../src/assets/female.png"
+          },
+          {
+            "id": 2,
+            "label":"Männlich",
+            "dependencyValue": "male",
+            "icon": "../src/assets/male.png"
+          },
+          {
+            "id": 3,
+            "label":"Andere",
+            "dependencyValue": "all",
+            "icon": "../src/assets/all.png"
+          }
+        ],
+        "showBackButton": false,
+        "viewType": "row",
+        "font": "nunito"
+      },
+      {
+        "id": 3,
+        "title": "Wie alt sind Sie?",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "18-29 Jahre",
+            "dependencyValue": "young-adult"
+          },
+          {
+            "id": 2,
+            "label": "30-39 Jahre",
+            "dependencyValue": "adult"
+          },
+          {
+            "id": 3,
+            "label": "40-49 Jahre",
+            "dependencyValue": "middle-age"
+          },
+          {
+            "id": 4,
+            "label": "50+",
+            "dependencyValue": "senior"
+          }
+        ],
+        "showBackButton": true,
+        "viewType": "col",
+        "font": "albert"
+      },
+      {
+        "id": 4,
+        "title": "Was mögen Sie in einem Buch am wenigsten?",
+        "type": "multiple-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "Mangel an Logik"
+          },
+          {
+            "id": 2,
+            "label": "Langsames Tempo"
+          },
+          {
+            "id": 3,
+            "label": "Fehlender Humor"
+          },
+          {
+            "id": 4,
+            "label": "Ein viel zu generisches Ende"
+          }
+        ],
+        "showBackButton": true,
+        "viewType": "col",
+        "minOptions": 1,
+        "font": "albert"
+      },
+      {
+        "id": 5,
+        "title": "Was sind Ihre Lieblingsthemen?",
+        "type": "bubble",
+        "description": "Wählen Sie bis zu {{minOptions}} Themen aus, die Ihnen gefallen\n",
+        "options": [
+          {
+            "id": 1,
+            "label": "Werwolf",
+            "dependencies": ["young-adult", "adult"],
+            "icon": "../src/assets/werewolf.png"
+          },
+          {
+            "id": 2,
+            "label": "Aktion",
+            "dependencies": ["young-adult", "adult", "middle-age"],
+            "icon": "../src/assets/all.png"
+          },
+          {
+            "id": 3,
+            "label": "Königliche Besessenheit",
+            "dependencies": ["adult", "middle-age"],
+            "icon": "../src/assets/royal.png"
+          },
+          {
+            "id": 4,
+            "label": "Milliardär",
+            "dependencies": ["adult", "middle-age", "senior"],
+            "icon": "../src/assets/billionaire.png"
+          },
+          {
+            "id": 5,
+            "label": "Romantik",
+            "dependencies": ["young-adult", "adult", "middle-age"],
+            "icon": "../src/assets/romance.png"
+          },
+          {
+            "id": 6,
+            "label": "Jugendliteratur",
+            "dependencies": ["young-adult"],
+            "icon": "../src/assets/adult.png"
+          },
+          {
+            "id": 7,
+            "label": "Böser Junge",
+            "dependencies": ["young-adult", "adult"],
+            "icon": "../src/assets/badboy.png"
+          }
+        ],
+        "showBackButton": true,
+        "minOptions": 3,
+        "font": "nunito"
+      }
+    ],
+    "button": "Weiter"
+  },
+  "loading": {
+    "text": "Sammlungen für Sie werden gesucht…",
+    "font": "albert"
+  },
+  "email": {
+    "title": "Email",
+    "description": "Geben Sie Ihre E-Mail-Adresse ein, um vollen Zugriff zu erhalten",
+    "placeholder": "Ihre E-Mail-Adresse",
+    "validationMessage": "Ungültige E-Mail-Adresse",
+    "additionalInfo": "Indem ich fortfahre, stimme ich der <strong>Datenschutzerklärung</strong> und <strong>Nutzungsbedingungen</strong> zu.",
+    "button": "Weiter",
+    "font": "albert"
+  },
+  "thankYou": {
+    "title": "Vielen Dank!",
+    "description": "dass Sie uns unterstützen und am Quiz teilnehmen",
+    "button": "Quiz erneut durchführen",
+    "subButton": "Meine Antworten herunterladen",
+    "noAnswers": "Keine Antworten verfügbar, um eine CSV-Datei zu erstellen",
+    "font": "albert"
+  }
+}

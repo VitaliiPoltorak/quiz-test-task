@@ -1,0 +1,198 @@
+{
+  "quiz": {
+    "questions": [
+      {
+        "id": 1,
+        "title": "What is your preferred language?",
+        "description": "Choose language",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "English",
+            "localeCode": "en"
+          },
+          {
+            "id": 2,
+            "label": "French",
+            "localeCode": "fr"
+          },
+          {
+            "id": 3,
+            "label": "German",
+            "localeCode": "de"
+          },
+          {
+            "id": 4,
+            "label": "Spanish",
+            "localeCode": "es"
+          }
+        ],
+        "showBackButton": false,
+        "viewType":"col",
+        "font": "nunito"
+      },
+      {
+        "id": 2,
+        "title": "What gender do you identify with?",
+        "description": "Please share how do you identify yourself",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label":"Female",
+            "dependencyValue": "female",
+            "icon": "../src/assets/female.png"
+          },
+          {
+            "id": 2,
+            "label":"Male",
+            "dependencyValue": "male",
+            "icon": "../src/assets/male.png"
+          },
+          {
+            "id": 3,
+            "label":"Other",
+            "dependencyValue": "all",
+            "icon": "../src/assets/all.png"
+          }
+        ],
+        "showBackButton": false,
+        "viewType": "row",
+        "font": "nunito"
+      },
+      {
+        "id": 3,
+        "title": "What is your age?",
+        "type": "single-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "18-29 years",
+            "dependencyValue": "young-adult"
+          },
+          {
+            "id": 2,
+            "label": "30-39 years",
+            "dependencyValue": "adult"
+          },
+          {
+            "id": 3,
+            "label": "40-49 years",
+            "dependencyValue": "middle-age"
+          },
+          {
+            "id": 4,
+            "label": "50+",
+            "dependencyValue": "senior"
+          }
+        ],
+        "showBackButton": true,
+        "viewType": "col",
+        "font": "albert"
+      },
+      {
+        "id": 4,
+        "title": "What do you <strong>hate</strong> the most in a book?",
+        "type": "multiple-select",
+        "options": [
+          {
+            "id": 1,
+            "label": "Lack of logic"
+          },
+          {
+            "id": 2,
+            "label": "A slow speed"
+          },
+          {
+            "id": 3,
+            "label": "Lack of humor"
+          },
+          {
+            "id": 4,
+            "label": "Way too generic ending"
+          }
+        ],
+        "showBackButton": true,
+        "viewType": "col",
+        "minOptions": 1,
+        "font": "albert"
+      },
+      {
+        "id": 5,
+        "title": "What are your favorite topics?",
+        "type": "bubble",
+        "description": "Choose up to {{minOptions}} topics you like",
+        "options": [
+          {
+            "id": 1,
+            "label": "Werewolf",
+            "dependencies": ["young-adult", "adult"],
+             "icon": "../src/assets/werewolf.png"
+          },
+          {
+            "id": 2,
+            "label": "Action",
+            "dependencies": ["young-adult", "adult", "middle-age"],
+             "icon": "../src/assets/all.png"
+          },
+          {
+            "id": 3,
+            "label": "Royal Obsession",
+            "dependencies": ["adult", "middle-age"],
+             "icon": "../src/assets/royal.png"
+          },
+          {
+            "id": 4,
+            "label": "Billionaire",
+            "dependencies": ["adult", "middle-age", "senior"],
+             "icon": "../src/assets/billionaire.png"
+          },
+          {
+            "id": 5,
+            "label": "Romance",
+            "dependencies": ["young-adult", "adult", "middle-age"],
+             "icon": "../src/assets/romance.png"
+          },
+          {
+            "id": 6,
+            "label": "Young Adult",
+            "dependencies": ["young-adult"],
+             "icon": "../src/assets/adult.png"
+          },
+          {
+            "id": 7,
+            "label": "Bad Boy",
+            "dependencies": ["young-adult", "adult"],
+             "icon": "../src/assets/badboy.png"
+          }
+        ],
+        "showBackButton": true,
+        "minOptions": 3,
+        "font": "nunito"
+      }
+    ],
+    "button": "Next"
+  },
+  "loading": {
+    "text": "Finding collections for you...",
+    "font": "albert"
+  },
+  "email": {
+    "title": "Email",
+    "description": "Enter your email to get full access",
+    "placeholder": "Your email",
+    "validationMessage": "Invalid email",
+    "additionalInfo": "By continuing I agree with <strong>Privacy policy</strong> and <strong>Terms of use</strong>.",
+    "button": "Next",
+    "font": "albert"
+  },
+  "thankYou": {
+    "title": "Thank you!",
+    "description": "for supporting us and passing quiz",
+    "button": "Retake quiz",
+    "subButton": "Download my answers",
+    "noAnswers": "No answers available to generate CSV",
+    "font": "albert"
+  }
+}

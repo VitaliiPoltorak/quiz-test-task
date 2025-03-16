@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Niconne&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import "tailwindcss";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: rgb(27, 1, 41);
+  color: #fff;
+}
+
+@theme {
+  --font-nunito: "Nunito Sans", sans-serif;
+  --font-albert: "Albert Sans", sans-serif;
+  --font-niconne: "Niconne", serif;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 15px;
+  }
+}
