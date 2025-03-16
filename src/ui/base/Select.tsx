@@ -31,7 +31,7 @@ export const SelectButton = ( {
                                 questionType = QuestionType.SingleSelect
                               }: SelectButtonProps ) => {
   return <button
-    className={`px-[2rem] rounded-[16px] border border-[#36173D] ${selected ? "bg-[rgba(228,34,155,0.2)] border-[#E4229B] " : "bg-[#36173D] text-white"} ${viewType === ViewType.Column ? 'text-[1.7rem] text-left py-[1.8rem]' : 'text-2xl flex-1 text-center flex gap-[1rem] flex-col py-[3rem]'} hover:bg-[#E4229B] transition-all ease-linear group cursor-pointer`}
+    className={`px-[2rem] rounded-[16px] border border-[#36173D] ${selected ? "bg-[rgba(228,34,155,0.2)] border-[#E4229B] " : "bg-[#36173D] text-white"} ${viewType === ViewType.Column ? 'text-[1.7rem] text-left py-[1.8rem]' : 'text-2xl flex-1 text-center flex gap-[1rem] flex-col py-[3rem] items-center'} hover:bg-[#E4229B] transition-all ease-linear group cursor-pointer`}
     onClick={onClick}
   >
     {icon && <img src={icon} alt={option} className={'w-full aspect-square'}/>}
